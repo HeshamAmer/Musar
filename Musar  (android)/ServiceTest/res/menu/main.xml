@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:onClick="openSettingsWindow"
+        android:icon="@drawable/settings"
+        android:title="@string/action_settings"
+        />
+    <item 
+        android:id="@+id/action_refresh"
+        android:showAsAction="ifRoom"
+         android:onClick="RefreshFragment"
+        android:title="@string/action_refresh"
+        android:icon="@drawable/refresh"
+        />
+	<item
+        android:id="@+id/action_about"
+        android:title="@string/action_about"
+        android:onClick="openAboutUsWindow"
+        android:icon="@drawable/about"
+        />
+    <item 
+        android:id="@+id/action_contactus"
+        android:title="@string/action_contactus"
+        android:onClick="openContactUsWindow"
+        android:icon="@drawable/contact"
+        />
+    
+
+</menu>

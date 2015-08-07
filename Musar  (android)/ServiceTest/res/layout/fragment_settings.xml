@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <PreferenceCategory android:title="General" >
+
+        <Preference
+            android:key="deleteAccountButton"
+            android:summary="Careful this will delete your account permenantly"
+            android:title="Delete Account" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:icon="@drawable/ic_home"
+        android:title="Youtube Settings" >
+
+        <CheckBoxPreference
+            android:key="uTubeRevive"
+           	android:defaultValue="false"
+            android:summary="Allows Musar to preload recommended videos"
+            android:title="Allow Youtube preload" />
+
+        <ListPreference
+            android:entries="@array/cacheSizeYT"
+            android:entryValues="@array/cacheSizeYTValues"
+            android:key="cacheSizeYouTube"
+            android:defaultValue="50" 
+            android:title="Set Max Cache Size" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Tracking Settings" >
+
+        <CheckBoxPreference
+            android:key="TrackerServiceRevive"
+            android:defaultValue="true"
+            android:summary="Allows Musar to track your application activity (disabling this means that you will recieve no recommendations)"
+            android:title="Allow Application Tracking" />
+        <Preference
+            android:key="selectBannedApps"
+            android:summary="check the apps that you want musar to track"
+            android:title="Select Trackable Apps" />
+       <CheckBoxPreference
+            android:key="LogsServiceRevive"
+            android:defaultValue="true"
+            android:summary="Allows Musar to track and Notify you with your missed calls"
+            android:title="Allow Calls Tracking" />
+
+        <CheckBoxPreference
+            android:key="LocationServiceRevive"
+            android:defaultValue="true"
+            android:summary="Allows musar to send message to a set number whenever location changes"
+            android:title="Allow Location Tracking" />
+
+        <Preference
+            android:key="selectGuardian"
+            android:summary="Select a number from phonebook to send messages to when location changes"
+            android:title="Select Guardian" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

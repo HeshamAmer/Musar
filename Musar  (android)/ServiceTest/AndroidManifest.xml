@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.musar.gui"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_SERVICE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.NETWORK"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"></uses-permission> 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+     <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/musarlogo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.musar.services.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.OPTIONS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        
+         <activity
+            android:name="com.musar.locchange.LocationActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.LOCATIONSERVICE" />
+
+                
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.musar.gui.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.musar.youtubedownloader.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter >
+                <action android:name="android.intent.action.VIDEOVIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+      <activity 
+            android:name="com.musar.youtubedownloader.video_play"
+            android:label="@string/app_name">
+            <intent-filter >
+                <action android:name="android.intent.action.VIDEOPLAY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.musar.services.RegisterActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.REGISTER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.musar.services.ConfirmationActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CONFIRM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.musar.gui.FriendsRecommendations"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.FRIENDS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.musar.gui.SelectBannedAppsActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SELECTAPPS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <service
+            android:name="com.musar.services.LogsService"
+            android:enabled="true"
+            ></service>
+        <service
+            android:name="com.musar.services.TrackerService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name="com.musar.services.ContactsManager"
+            android:enabled="true" >
+        </service>
+		<service
+            android:name="com.musar.services.LocationService"
+            android:enabled="true" >
+        </service>        
+        <service
+            android:name="com.musar.services.MainService"
+            android:enabled="true" >
+        </service>       
+        <service
+            android:name="com.musar.services.LocationNotificationService"
+            android:enabled="true">
+        </service> 
+        <service
+            android:name="com.musar.services.CallsNotificationService"
+            android:enabled="true">
+        </service>
+        <service android:enabled="true" android:name="com.musar.youtubedownloader.youtube_service" > </service>
+        <service android:enabled="true" android:name="com.musar.youtubedownloader.music_play" > </service>
+       <service android:enabled="true" android:name="com.musar.youtubedownloader.music_track" > </service>
+        <service android:enabled="true" android:name="com.musar.system.ServerCall" > </service>
+        <receiver android:name="youtube.downloader.youtube_service.WifiReceiver">
+            <intent-filter>
+            <action android:name="android.net.wifi.NETWORK_STATE_CHANGED_ACTION" />
+            <action android:name="android.net.wifi.WIFI_STATE_CHANGED_ACTION" />
+            <action android:name="android.intent.action.BATTERY_CHANGED" />
+            </intent-filter>
+            </receiver>
+        <receiver android:name="com.musar.youtubedownloader.BootUpReceiver">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            <category android:name="android.intent.category.HOME" />
+        </intent-filter>
+    </receiver>
+    </application>
+
+</manifest>
