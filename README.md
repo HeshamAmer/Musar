@@ -10,9 +10,9 @@ when travelling alone to a new place.
 Musar is a lightweight application that has a lot of features but is currently out of scope of our work.
 The project MAY not compile as it was deployed in 2014 on Eclipse.
 Project owners:
-1-Hesham Hamdy 
-2-Ahmed el Rayes
-3-Eman Mostafa
-4-Haron Shihab
+  1-Hesham Hamdy 
+  2-Ahmed el Rayes
+  3-Eman Mostafa
+  4-Haron Shihab
 
 For any questions do not hesitate to contact me.
